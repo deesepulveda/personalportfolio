@@ -1,0 +1,220 @@
+.container_section_hero {
+  position: relative;
+
+  &::before {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.8)
+    );
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background-image: url("/public/images/garrhet-sampson-CmF_5GYc6c0-unsplash.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -3;
+  }
+
+  // HEADER
+
+  .container_section_hero_header {
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    // Header Nav
+
+    .container_section_hero_nav {
+      width: 100vw;
+      height: calc(100vh - 4rem);
+      position: fixed;
+      top: calc(0% + 4rem);
+      @include removeNav;
+      @include transit3;
+      z-index: 80;
+
+      &::after {
+        content: "";
+        @include keep-it-hundo;
+        @include absol-topLeftZero;
+        background-color: $color-black;
+        opacity: 0.8;
+        z-index: -1;
+      }
+
+      .container_section_hero_ul {
+        @include keep-it-hundo;
+        @include flex-center-col;
+
+        .container_section_hero_li {
+          margin-bottom: 2rem;
+          list-style-type: none;
+
+          font-size: 5rem;
+          font-weight: bold;
+          letter-spacing: 0.5rem;
+          -webkit-text-stroke: 0.01px #ffffff;
+          -webkit-text-fill-color: transparent;
+
+          a {
+            text-decoration: none;
+            color: $color-white;
+          }
+        }
+
+        .active_nav_links {
+          -webkit-text-stroke: transparent;
+          -webkit-text-fill-color: $color-white;
+        }
+      }
+    }
+
+    .active_nav {
+      transform: translateX(0vw);
+      -webkit-transform: translateX(0vw);
+      -moz-transform: translateX(0vw);
+      -ms-transform: translateX(0vw);
+      -o-transform: translateX(0vw);
+    }
+
+    // Header Burger
+
+    .burger {
+      width: 3.75rem;
+      height: 2rem;
+      position: absolute;
+      bottom: 0;
+      right: 2rem;
+      z-index: 90;
+      cursor: pointer;
+
+      .burger_top {
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-white;
+        @include transit3;
+      }
+
+      .burger_middle {
+        width: 50%;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(0%, -50%);
+        -webkit-transform: translate(0%, -50%);
+        -moz-transform: translate(0%, -50%);
+        -ms-transform: translate(0%, -50%);
+        -o-transform: translate(0%, -50%);
+        background-color: $color-white;
+        @include transit3;
+      }
+
+      .burger_bottom {
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $color-white;
+        @include transit3;
+      }
+
+      .burgerTopClose {
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(140deg);
+        -webkit-transform: translate(-50%, -50%) rotate(140deg);
+        -moz-transform: translate(-50%, -50%) rotate(140deg);
+        -ms-transform: translate(-50%, -50%) rotate(140deg);
+        -o-transform: translate(-50%, -50%) rotate(140deg);
+      }
+
+      .burgerMiddleClose {
+        display: none;
+      }
+
+      .burgerBottomClose {
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-140deg);
+        -webkit-transform: translate(-50%, -50%) rotate(-140deg);
+        -moz-transform: translate(-50%, -50%) rotate(-140deg);
+        -ms-transform: translate(-50%, -50%) rotate(-140deg);
+        -o-transform: translate(-50%, -50%) rotate(-140deg);
+      }
+    }
+  }
+
+  .container_section_hero_content_container {
+    width: 100%;
+    height: 40rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    @include absol-center;
+    @include flex-center-col;
+    border: 1px solid white;
+
+    .container_section_hero_content_title {
+      width: 100%;
+      height: auto;
+      margin-bottom: 3rem;
+      @include flex-center;
+
+      img {
+        width: 80%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    .container_section_hero_content_subtitle {
+      width: 100%;
+      height: auto;
+      margin-bottom: 2rem;
+
+      img {
+        width: 80%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    .container_section_hero_content_ctaBox {
+      width: 100%;
+      height: 7rem;
+      @include flex-center;
+
+      .container_section_hero_content_ctaBtn {
+        padding: 0.5rem 2rem;
+        text-decoration: none;
+        color: $color-white;
+        font-family: $primary-font;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        font-size: 2.5rem;
+        border: 0.1rem solid $color-white;
+        background-color: transparent;
+      }
+    }
+  }
+}

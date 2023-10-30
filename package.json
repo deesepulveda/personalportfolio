@@ -1,0 +1,11 @@
+{
+  "name": "starter-files",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "sass--watch": "sass sass/scss/styles.scss:css/styles.css -w "
+  },
+  "author": "",
+  "license": "ISC"
+}

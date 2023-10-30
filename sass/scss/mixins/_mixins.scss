@@ -55,6 +55,14 @@
   -o-transform: translateX(-100vw);
 }
 
+@mixin showNav {
+  transform: translateX(0vw);
+  -webkit-transform: translateX(0vw);
+  -moz-transform: translateX(0vw);
+  -ms-transform: translateX(0vw);
+  -o-transform: translateX(0vw);
+}
+
 @mixin transformX {
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);

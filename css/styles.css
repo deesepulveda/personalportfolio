@@ -55,7 +55,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("/public/images/garrhet-sampson-CmF_5GYc6c0-unsplash.jpg");
+  background-image: url("../public/images/garrhet-sampson-CmF_5GYc6c0-unsplash.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

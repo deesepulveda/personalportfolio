@@ -6,6 +6,10 @@ const burgerMiddle = document.querySelector(".burger_middle");
 const burgerBottom = document.querySelector(".burger_bottom");
 const nav = document.querySelector(".container_section_hero_nav");
 const navLinks = document.querySelectorAll(".container_section_hero_li");
+const projectLinks = document.querySelectorAll(
+  ".container_section_projects_li"
+);
+const modalImg = document.querySelector(".modalImage");
 
 // Media Queries
 
@@ -46,5 +50,12 @@ navLinks.forEach((nl) => {
     resetLinks();
     if (e.currentTarget && desktopMedia.matches === true)
       nl.classList.add("active_nav_links");
+  });
+});
+
+projectLinks.forEach((pl) => {
+  pl.addEventListener("click", (e) => {
+    const newImg = e.currentTarget.children[1].src;
+    modalImg.src = newImg;
   });
 });

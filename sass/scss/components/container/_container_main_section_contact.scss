@@ -24,4 +24,10 @@
     background-size: cover;
     z-index: -3;
   }
+
+  .container_section_contact_container {
+    @include keep-it-hundo;
+    @include flex-center-col;
+    border: 1px solid red;
+  }
 }

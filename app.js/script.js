@@ -1,6 +1,5 @@
 "use strict";
 
-const main = document.querySelector(".container_main");
 const burger = document.querySelector(".burger");
 const burgerTop = document.querySelector(".burger_top");
 const burgerMiddle = document.querySelector(".burger_middle");
@@ -12,7 +11,6 @@ const projectLinks = document.querySelectorAll(
 );
 const modalImg = document.querySelector(".modalImage");
 const scrolledNav = document.querySelectorAll(".scrolled_nav");
-const containerSections = document.querySelectorAll(".container_sections");
 
 // Media Queries
 
@@ -66,7 +64,7 @@ projectLinks.forEach((pl) => {
   });
 });
 
-// Nav Links Highlighted when scrolled to section
+// Nav Links Highlighted when Scrolled to Sections
 
 // Observer Callback Function
 
@@ -106,3 +104,17 @@ const sectionsObserver = new IntersectionObserver(
 scrolledNav.forEach((sn) => {
   sectionsObserver.observe(sn);
 });
+
+// Send Email with Email JS
+
+const sendMail = () => {
+  const params = {
+    from_name: document.getElementById("fullName").value,
+    email_id: document.getElementById("email_id").value,
+    message: document.getElementById("message").value,
+  };
+
+  emailjs.send("service_giz9sqf", "template_tazcnoa", params).then((res) => {
+    alert(`Success! ${res.status}`);
+  });
+};

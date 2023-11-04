@@ -1,5 +1,6 @@
 "use strict";
 
+const main = document.querySelector(".container_main");
 const burger = document.querySelector(".burger");
 const burgerTop = document.querySelector(".burger_top");
 const burgerMiddle = document.querySelector(".burger_middle");
@@ -10,6 +11,8 @@ const projectLinks = document.querySelectorAll(
   ".container_section_projects_li"
 );
 const modalImg = document.querySelector(".modalImage");
+const scrolledNav = document.querySelectorAll(".scrolled_nav");
+const containerSections = document.querySelectorAll(".container_sections");
 
 // Media Queries
 
@@ -47,15 +50,59 @@ const resetLinks = () => {
 
 navLinks.forEach((nl) => {
   nl.addEventListener("click", (e) => {
-    resetLinks();
-    if (e.currentTarget && desktopMedia.matches === true)
+    if (e.currentTarget && desktopMedia.matches === true) {
+      resetLinks();
       nl.classList.add("active_nav_links");
+    }
   });
 });
+
+// Show Images Corresponding to Project Links Clicked
 
 projectLinks.forEach((pl) => {
   pl.addEventListener("click", (e) => {
     const newImg = e.currentTarget.children[1].src;
     modalImg.src = newImg;
   });
+});
+
+// Nav Links Highlighted when scrolled to section
+
+// Observer Callback Function
+
+const sectionsFunction = function (entries) {
+  const [entry] = entries;
+  // console.log(entry);
+
+  // entry.target.classList.toggle("active_nav_links", entry.isIntersecting);
+
+  if (entry.isIntersecting && desktopMedia.matches === true) {
+    let current = entry.target.getAttribute("id");
+
+    navLinks.forEach((nl) => {
+      if (nl.classList[1] === current) {
+        resetLinks();
+        nl.classList.add("active_nav_links");
+      }
+    });
+  }
+};
+
+// Observer Options
+
+const sectionsOptions = {
+  root: null,
+  threshold: 0,
+  rootMargin: "-50px",
+};
+
+// Actual Observer
+
+const sectionsObserver = new IntersectionObserver(
+  sectionsFunction,
+  sectionsOptions
+);
+
+scrolledNav.forEach((sn) => {
+  sectionsObserver.observe(sn);
 });

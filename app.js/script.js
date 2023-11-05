@@ -115,6 +115,14 @@ const sendMail = () => {
   };
 
   emailjs.send("service_giz9sqf", "template_tazcnoa", params).then((res) => {
-    alert(`Success! ${res.status}`);
+    if (
+      params.from_name.value === "" ||
+      params.email_id.value === "" ||
+      params.message.value === ""
+    ) {
+      alert("All Fields Must be Filled!");
+    } else {
+      alert(`Success! Email Sent! ${res.status}`);
+    }
   });
 };

@@ -601,7 +601,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid red;
+}
+.container_section_contact .container_section_contact_container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container_main {

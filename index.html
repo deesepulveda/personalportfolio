@@ -164,17 +164,24 @@
         id="contact"
       >
         <div class="container_section_contact_container">
-          <form action="">
-            <input type="text" id="fullName" placeholder="Full Name" /><input
+          <form onsubmit="sendMail()">
+            <input
+              type="text"
+              id="fullName"
+              placeholder="Full Name"
+              required
+            /><input
               type="email"
               id="email_id"
               placeholder="Email Address"
+              required
             /><textarea
               id="message"
               rows="10"
               placeholder="Type Comments"
+              required
             ></textarea>
-            <button type="submit" onclick="sendMail()">Submit</button>
+            <button type="submit">Submit</button>
           </form>
         </div>
       </section>

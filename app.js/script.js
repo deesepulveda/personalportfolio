@@ -55,15 +55,6 @@ navLinks.forEach((nl) => {
   });
 });
 
-// Show Images Corresponding to Project Links Clicked
-
-projectLinks.forEach((pl) => {
-  pl.addEventListener("click", (e) => {
-    const newImg = e.currentTarget.children[1].src;
-    modalImg.src = newImg;
-  });
-});
-
 // Nav Links Highlighted when Scrolled to Sections
 
 // Observer Callback Function

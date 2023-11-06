@@ -4,28 +4,11 @@
   .container_section_projects_container {
     @include keep-it-hundo;
     max-width: 120rem;
-    @include flex-center-col;
-    justify-content: flex-end;
-
-    @include desktop {
-      & {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-      }
-    }
 
     .container_section_projects_linksBox {
-      width: 100%;
+      @include keep-it-hundo;
       max-width: 120rem;
-      height: 45%;
-      border: 1px solid green;
-
-      @include desktop {
-        & {
-          width: 35%;
-        }
-      }
+      margin: 0 auto;
 
       .container_section_projects_ul {
         @include keep-it-hundo;
@@ -33,43 +16,85 @@
 
         @include desktop {
           & {
-            width: auto;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
           }
         }
 
         .container_section_projects_li {
-          width: 20rem;
-          height: 4rem;
+          width: 22rem;
+          height: 5rem;
           list-style-type: none;
-          @include flex-center;
+          position: relative;
+          @include flex-center-col;
+          @include transit3;
           border: 0.1rem solid $color-white;
           cursor: pointer;
 
+          &::before {
+            content: "";
+            @include keep-it-hundo;
+            @include absol-center;
+            background-color: $color-black;
+            z-index: -1;
+            opacity: 0.7;
+          }
+
+          @include desktop {
+            & {
+              flex-direction: row;
+              justify-content: center;
+              align-self: center;
+            }
+          }
+
           &:not(:last-child) {
             margin-bottom: 1rem;
+
+            @include desktop {
+              & {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          &:hover {
+            height: 20rem;
+
+            @include desktop {
+              & {
+                width: 45rem;
+                height: 45rem;
+              }
+            }
+          }
+
+          &:hover > .contentBox > .project_site_link {
+            display: block;
           }
 
           @include tabletPortrait {
             & {
-              width: 30rem;
-              height: 6rem;
+              width: 45rem;
+              height: 10rem;
             }
           }
 
           @include desktop {
-            &:hover {
-              color: $color-black;
-              background-color: $color-yellow;
-              border: 0.1rem solid $color-yellow;
-              text-shadow: 0.1rem 0.1rem 0.3rem rgb(60, 58, 58);
-              @include transit3;
+            & {
+              width: 12rem;
+              height: 45rem;
             }
           }
 
           p {
-            font-size: 1.8rem;
+            width: 100%;
+            height: auto;
+            font-size: 1.5rem;
             font-family: $secondary-font-bold;
             letter-spacing: 0.1rem;
+            z-index: 5;
 
             @include tabletPortrait {
               & {
@@ -77,55 +102,117 @@
                 font-size: 2.25rem;
               }
             }
+
+            @include desktop {
+              & {
+                transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg);
+                -moz-transform: rotate(-90deg);
+                -ms-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
+              }
+            }
           }
 
-          img {
-            display: none;
-          }
-        }
-      }
-    }
+          .contentBox {
+            @include keep-it-hundo;
+            position: relative;
 
-    .container_section_projects_contentBox {
-      width: 100%;
-      height: 45%;
-      overflow: hidden;
-      border: 1px solid white;
+            .project_site_link {
+              display: none;
+              font-size: 1.8rem;
+              text-decoration: none;
+              color: $color-black;
+              padding: 0.5rem 2rem;
+              position: absolute;
+              bottom: 15%;
+              left: 50%;
+              @include transformX;
+              @include transit3;
+              background-color: $color-white;
 
-      @include desktop {
-        & {
-          width: 50%;
-        }
-      }
-
-      .container_section_projects_modal {
-        @include keep-it-hundo;
-        position: relative;
-
-        &::before {
-          content: "";
-          @include keep-it-hundo;
-          @include absol_topLeftZero;
-          background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 1),
-            rgba(0, 0, 0, 0.5)
-          );
-
-          @include desktop {
-            & {
-              background: linear-gradient(
-                to right,
-                rgba(0, 0, 0, 1),
-                rgba(0, 0, 0, 0.5)
-              );
+              @include desktop {
+                &:hover {
+                  background-color: $color-yellow;
+                }
+              }
             }
           }
         }
 
-        .modalImage {
-          @include keep-it-hundo;
-          object-fit: cover;
+        .container_section_projects_li:nth-child(1) {
+          position: relative;
+
+          &::after {
+            content: "";
+            @include keep-it-hundo;
+            @include absol-center;
+            background: url(/public/images/DanasArtworkScreen.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -2;
+          }
+        }
+
+        .container_section_projects_li:nth-child(2) {
+          position: relative;
+
+          &::after {
+            content: "";
+            @include keep-it-hundo;
+            @include absol-center;
+            background: url(../public/images/luxury_motors_project.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -2;
+          }
+        }
+
+        .container_section_projects_li:nth-child(3) {
+          position: relative;
+
+          &::after {
+            content: "";
+            @include keep-it-hundo;
+            @include absol-center;
+            background: url(../public/images/bienchido.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -2;
+          }
+        }
+
+        .container_section_projects_li:nth-child(4) {
+          position: relative;
+
+          &::after {
+            content: "";
+            @include keep-it-hundo;
+            @include absol-center;
+            background: url(../public/images/sssbullies_project.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -2;
+          }
+        }
+
+        .container_section_projects_li:nth-child(5) {
+          position: relative;
+
+          &::after {
+            content: "";
+            @include keep-it-hundo;
+            @include absol-center;
+            background: url(../public/images/nikita-D_m45VL5s4w-unsplash.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -2;
+          }
         }
       }
     }

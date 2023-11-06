@@ -11,6 +11,9 @@ const projectLinks = document.querySelectorAll(
 );
 const modalImg = document.querySelector(".modalImage");
 const scrolledNav = document.querySelectorAll(".scrolled_nav");
+const slides = document.querySelectorAll(".slide");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
 
 // Media Queries
 
@@ -91,7 +94,7 @@ const sectionsFunction = function (entries) {
 const sectionsOptions = {
   root: null,
   threshold: 0,
-  rootMargin: "-50px",
+  rootMargin: "-10px",
 };
 
 // Actual Observer
@@ -105,7 +108,7 @@ scrolledNav.forEach((sn) => {
   sectionsObserver.observe(sn);
 });
 
-// Send Email with Email JS
+// Contact Form with Email JS
 
 const sendMail = () => {
   const params = {
@@ -126,3 +129,49 @@ const sendMail = () => {
     }
   });
 };
+
+// Image Carousel Slider
+
+// Counter
+
+let curSlide = 0;
+const maxSlide = slides.length;
+
+// Go to Next Slide Function
+
+const goToSlide = (slide) => {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  );
+};
+
+// Project Slider Carousel
+
+goToSlide(0);
+
+// Next Slide
+
+const nextSlide = () => {
+  if (curSlide === maxSlide - 1) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+
+  goToSlide(curSlide);
+};
+
+// Previous Slide
+
+const prevSlide = function () {
+  if (curSlide === 0) {
+    curSlide = maxSlide - 1;
+  } else {
+    curSlide--;
+  }
+
+  goToSlide(curSlide);
+};
+
+next.addEventListener("click", nextSlide);
+prev.addEventListener("click", prevSlide);

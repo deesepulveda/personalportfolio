@@ -27,6 +27,7 @@
           height: 5rem;
           list-style-type: none;
           position: relative;
+          overflow: hidden;
           @include flex-center-col;
           @include transit3;
           border: 0.1rem solid $color-white;
@@ -68,10 +69,28 @@
                 height: 45rem;
               }
             }
+
+            @include desktop {
+              &:hover > p {
+                transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+              }
+            }
           }
 
-          &:hover > .contentBox > .project_site_link {
-            display: block;
+          &:hover > .contentBox {
+            transform: translateX(0vw);
+            -webkit-transform: translateX(0vw);
+            -moz-transform: translateX(0vw);
+            -ms-transform: translateX(0vw);
+            -o-transform: translateX(0vw);
+          }
+
+          &:hover > p {
+            display: none;
           }
 
           @include tabletPortrait {
@@ -91,9 +110,10 @@
           p {
             width: 100%;
             height: auto;
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-family: $secondary-font-bold;
             letter-spacing: 0.1rem;
+            @include transit3;
             z-index: 5;
 
             @include tabletPortrait {
@@ -102,38 +122,41 @@
                 font-size: 2.25rem;
               }
             }
-
-            @include desktop {
-              & {
-                transform: rotate(-90deg);
-                -webkit-transform: rotate(-90deg);
-                -moz-transform: rotate(-90deg);
-                -ms-transform: rotate(-90deg);
-                -o-transform: rotate(-90deg);
-              }
-            }
           }
 
           .contentBox {
             @include keep-it-hundo;
-            position: relative;
+            @include flex-center-col;
+            @include transit3;
+            transform: translateX(-100vw);
+            -webkit-transform: translateX(-100vw);
+            -moz-transform: translateX(-100vw);
+            -ms-transform: translateX(-100vw);
+            -o-transform: translateX(-100vw);
 
-            .project_site_link {
-              display: none;
-              font-size: 1.8rem;
-              text-decoration: none;
-              color: $color-black;
-              padding: 0.5rem 2rem;
-              position: absolute;
-              bottom: 15%;
-              left: 50%;
-              @include transformX;
-              @include transit3;
-              background-color: $color-white;
+            .project_site_title {
+              width: 100%;
+              font-size: 1.5rem;
+              border: 1px solid red;
+            }
 
-              @include desktop {
-                &:hover {
-                  background-color: $color-yellow;
+            .project_site_linkBox {
+              width: 100%;
+              @include flex-center;
+              border: 1px solid green;
+
+              .project_site_link {
+                padding: 0.5rem 2rem;
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: $color-black;
+                @include transit3;
+                background-color: $color-white;
+
+                @include desktop {
+                  &:hover {
+                    background-color: $color-yellow;
+                  }
                 }
               }
             }

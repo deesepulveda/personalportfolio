@@ -26,9 +26,7 @@
           width: 22rem;
           height: 5rem;
           list-style-type: none;
-          position: relative;
           overflow: hidden;
-          @include flex-center-col;
           @include transit3;
           border: 0.1rem solid $color-white;
           cursor: pointer;
@@ -107,19 +105,29 @@
             }
           }
 
-          p {
-            width: 100%;
-            height: auto;
+          .container_section_projects_li_title {
+            @include keep-it-hundo;
             font-size: 1.75rem;
             font-family: $secondary-font-bold;
             letter-spacing: 0.1rem;
             @include transit3;
+            @include flex-center;
             z-index: 5;
 
             @include tabletPortrait {
               & {
-                width: 30rem;
-                font-size: 2.25rem;
+                font-size: 2.5rem;
+                letter-spacing: 0.2rem;
+              }
+            }
+
+            @include desktop {
+              & {
+                transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg);
+                -moz-transform: rotate(-90deg);
+                -ms-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
               }
             }
           }
@@ -136,14 +144,15 @@
 
             .project_site_title {
               width: 100%;
-              font-size: 1.5rem;
-              border: 1px solid red;
+              margin-bottom: 2rem;
+              font-size: 1.75rem;
+              font-family: $secondary-font-bold;
+              letter-spacing: 0.1rem;
             }
 
             .project_site_linkBox {
               width: 100%;
               @include flex-center;
-              border: 1px solid green;
 
               .project_site_link {
                 padding: 0.5rem 2rem;

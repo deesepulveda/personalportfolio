@@ -538,12 +538,7 @@ body {
   width: 22rem;
   height: 5rem;
   list-style-type: none;
-  position: relative;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   transition: 0.3s ease;
   -webkit-transition: 0.3s ease;
   -moz-transition: 0.3s ease;
@@ -623,9 +618,9 @@ body {
     height: 45rem;
   }
 }
-.container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li p {
+.container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .container_section_projects_li_title {
   width: 100%;
-  height: auto;
+  height: 100%;
   font-size: 1.75rem;
   font-family: "CenturyGothicBold", sans-serif;
   letter-spacing: 0.1rem;
@@ -634,12 +629,24 @@ body {
   -moz-transition: 0.3s ease;
   -ms-transition: 0.3s ease;
   -o-transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 5;
 }
 @media only screen and (min-width: 768px) {
-  .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li p {
-    width: 30rem;
-    font-size: 2.25rem;
+  .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .container_section_projects_li_title {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .container_section_projects_li_title {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
   }
 }
 .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .contentBox {
@@ -662,15 +669,16 @@ body {
 }
 .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .contentBox .project_site_title {
   width: 100%;
-  font-size: 1.5rem;
-  border: 1px solid red;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  font-family: "CenturyGothicBold", sans-serif;
+  letter-spacing: 0.1rem;
 }
 .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .contentBox .project_site_linkBox {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid green;
 }
 .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .contentBox .project_site_linkBox .project_site_link {
   padding: 0.5rem 2rem;

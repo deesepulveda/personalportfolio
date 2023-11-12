@@ -29,27 +29,61 @@
     @include keep-it-hundo;
     @include flex-center-col;
 
+    @include desktop {
+      & {
+        justify-content: flex-end;
+        padding-bottom: 5rem;
+      }
+    }
+
     .container_section_contact_container_wrapper {
-      @include keep-it-hundo;
+      width: 100%;
+      height: 80%;
+      max-width: 100rem;
+      margin: 0 auto;
       @include flex-center-col;
 
       .container_section_contact_container_title {
-        margin-bottom: 5rem;
-        font-size: 4rem;
+        margin-bottom: 8rem;
+        font-size: 3rem;
         letter-spacing: 0.5rem;
+
+        @include tabletPortrait {
+          & {
+            font-size: 4rem;
+          }
+        }
+
+        @include desktop {
+          & {
+            font-size: 2.2rem;
+          }
+        }
+
+        @include desktopFullHD {
+          & {
+            font-size: 4rem;
+          }
+        }
       }
 
       form {
-        width: 75%;
+        width: 70%;
         height: 70%;
         @include flex-center-col;
-        border: 1px solid red;
+        align-items: flex-end;
 
         .form_user_box {
           width: 100%;
           @include flex-center-col;
           align-items: flex-start;
-          font-size: 2rem;
+          font-size: 1.75rem;
+
+          @include desktopFullHD {
+            & {
+              font-size: 2.2rem;
+            }
+          }
 
           &:not(:nth-child(3)) {
             margin-bottom: 3rem;
@@ -63,6 +97,7 @@
 
           input,
           textarea {
+            color: $color-white;
             background-color: transparent;
             border: 0.1rem solid $color-white;
           }
@@ -74,11 +109,46 @@
 
           input {
             height: 4rem;
+
+            @include desktop {
+              & {
+                font-size: 1.75rem;
+              }
+            }
+          }
+
+          textarea {
+            resize: none;
           }
 
           .no_outline:focus {
             outline: transparent;
             border: 0.5px solid $color-yellow;
+          }
+        }
+
+        button {
+          margin-top: 2rem;
+          padding: 0.5rem 2.2rem;
+          color: $color-white;
+          font-family: $primary-font;
+          letter-spacing: 0.2rem;
+          font-size: 2rem;
+          background: transparent;
+          border: 0.1rem solid $color-white;
+          @include transit3;
+          text-shadow: 0.1rem 0.1rem 0.3rem rgb(60, 58, 58);
+          cursor: pointer;
+
+          &:hover {
+            color: $color-black;
+            background-color: $color-white;
+          }
+
+          @include desktopFullHD {
+            & {
+              font-size: 2.5rem;
+            }
           }
         }
       }

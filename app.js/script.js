@@ -98,6 +98,8 @@ scrolledNav.forEach((sn) => {
 
 // Contact Form with Email JS
 
+const contactForm = document.getElementById("contactForm");
+
 const sendMail = () => {
   const params = {
     from_name: document.getElementById("fullName").value,
@@ -114,6 +116,7 @@ const sendMail = () => {
       alert("All Fields Must be Filled!");
     } else {
       alert(`Success! Email Sent! ${res.status}`);
+      contactForm.reset();
     }
   });
 };

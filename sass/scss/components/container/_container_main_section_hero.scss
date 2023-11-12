@@ -46,7 +46,7 @@
         max-width: 120rem;
         margin: 0 auto;
         left: 50%;
-        background-color: $color-black;
+        // background-color: $color-black;
         @include transformX;
       }
     }

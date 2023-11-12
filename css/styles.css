@@ -76,7 +76,6 @@ body {
     max-width: 120rem;
     margin: 0 auto;
     left: 50%;
-    background-color: #000;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -860,6 +859,11 @@ body {
     padding-bottom: 5rem;
   }
 }
+@media only screen and (min-width: 2560px) {
+  .container_section_contact .container_section_contact_container {
+    padding-bottom: 15rem;
+  }
+}
 .container_section_contact .container_section_contact_container .container_section_contact_container_wrapper {
   width: 100%;
   height: 80%;
@@ -869,6 +873,11 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+@media only screen and (min-width: 2560px) {
+  .container_section_contact .container_section_contact_container .container_section_contact_container_wrapper {
+    height: 75%;
+  }
 }
 .container_section_contact .container_section_contact_container .container_section_contact_container_wrapper .container_section_contact_container_title {
   margin-bottom: 8rem;
@@ -887,6 +896,7 @@ body {
 }
 @media only screen and (min-width: 1920px) {
   .container_section_contact .container_section_contact_container .container_section_contact_container_wrapper .container_section_contact_container_title {
+    margin-bottom: 5rem;
     font-size: 4rem;
   }
 }
@@ -906,11 +916,12 @@ body {
   align-items: center;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
+  font-family: "CenturyGothic", sans-serif;
 }
 @media only screen and (min-width: 1920px) {
   .container_section_contact .container_section_contact_container .container_section_contact_container_wrapper form .form_user_box {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 .container_section_contact .container_section_contact_container .container_section_contact_container_wrapper form .form_user_box:not(:nth-child(3)) {
@@ -928,6 +939,7 @@ body {
   border: 0.1rem solid #fff;
 }
 .container_section_contact .container_section_contact_container .container_section_contact_container_wrapper form .form_user_box label {
+  margin-bottom: 0.5rem;
   text-align: start;
   letter-spacing: 0.2rem;
 }
@@ -948,11 +960,12 @@ body {
 }
 .container_section_contact .container_section_contact_container .container_section_contact_container_wrapper form button {
   margin-top: 2rem;
-  padding: 0.5rem 2.2rem;
+  padding: 0.6rem 2.2rem;
   color: #fff;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "CenturyGothicBold", sans-serif;
+  text-transform: uppercase;
   letter-spacing: 0.2rem;
-  font-size: 2rem;
+  font-size: 1.75rem;
   background: transparent;
   border: 0.1rem solid #fff;
   transition: 0.3s ease;
@@ -969,7 +982,7 @@ body {
 }
 @media only screen and (min-width: 1920px) {
   .container_section_contact .container_section_contact_container .container_section_contact_container_wrapper form button {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 }
 

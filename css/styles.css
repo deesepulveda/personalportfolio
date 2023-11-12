@@ -587,13 +587,10 @@ body {
     height: 45rem;
   }
 }
-@media only screen and (min-width: 1280px) {
-  .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li:hover:hover > p {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
+@media only screen and (min-width: 1920px) {
+  .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li:hover {
+    width: 50rem;
+    height: 55rem;
   }
 }
 .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li:hover > .contentBox {
@@ -603,7 +600,7 @@ body {
   -ms-transform: translateX(0vw);
   -o-transform: translateX(0vw);
 }
-.container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li:hover > p {
+.container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li:hover > .container_section_projects_li_title {
   display: none;
 }
 @media only screen and (min-width: 768px) {
@@ -616,6 +613,12 @@ body {
   .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li {
     width: 12rem;
     height: 45rem;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li {
+    width: 16rem;
+    height: 55rem;
   }
 }
 .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .container_section_projects_li_title {
@@ -633,6 +636,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 5;
+  border: 1px solid red;
 }
 @media only screen and (min-width: 768px) {
   .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .container_section_projects_li_title {
@@ -674,6 +678,12 @@ body {
   font-family: "CenturyGothicBold", sans-serif;
   letter-spacing: 0.1rem;
 }
+@media only screen and (min-width: 1920px) {
+  .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .contentBox .project_site_title {
+    font-size: 2.2rem;
+    padding: 1rem 3rem;
+  }
+}
 .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .contentBox .project_site_linkBox {
   width: 100%;
   display: flex;
@@ -697,6 +707,12 @@ body {
     background-color: rgb(229, 229, 5);
   }
 }
+@media only screen and (min-width: 1920px) {
+  .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .contentBox .project_site_linkBox .project_site_link {
+    font-size: 2.2rem;
+    padding: 1rem 3rem;
+  }
+}
 .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li:nth-child(1) {
   position: relative;
 }
@@ -712,7 +728,7 @@ body {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  background: url(/public/images/DanasArtworkScreen.png);
+  background: url(../public/images/DanasArtworkScreen.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

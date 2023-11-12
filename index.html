@@ -185,25 +185,45 @@
         id="contact"
       >
         <div class="container_section_contact_container">
-          <form onsubmit="sendMail()">
-            <input
-              type="text"
-              id="fullName"
-              placeholder="Full Name"
-              required
-            /><input
-              type="email"
-              id="email_id"
-              placeholder="Email Address"
-              required
-            /><textarea
-              id="message"
-              rows="10"
-              placeholder="Type Comments"
-              required
-            ></textarea>
-            <button type="submit">Submit</button>
-          </form>
+          <div class="container_section_contact_container_wrapper">
+            <div class="container_section_contact_container_title">
+              contact me
+            </div>
+            <form onsubmit="sendMail()">
+              <div class="form_user_box">
+                <label for="fullName">full name</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  placeholder="Full Name"
+                  class="no_outline"
+                  required
+                />
+              </div>
+              <div class="form_user_box">
+                <label for="email_id">email address</label
+                ><input
+                  type="email"
+                  id="email_id"
+                  class="no_outline"
+                  placeholder="Email Address"
+                  required
+                />
+              </div>
+              <div class="form_user_box">
+                <label for="message">Message</label
+                ><textarea
+                  id="message"
+                  class="no_outline"
+                  rows="10"
+                  cols="30"
+                  placeholder="Type Comments"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
         </div>
       </section>
     </div>

@@ -117,7 +117,6 @@
             @include transit3;
             @include flex-center;
             z-index: 5;
-            border: 1px solid red;
 
             @include tabletPortrait {
               & {
@@ -128,6 +127,7 @@
 
             @include desktop {
               & {
+                white-space: nowrap;
                 transform: rotate(-90deg);
                 -webkit-transform: rotate(-90deg);
                 -moz-transform: rotate(-90deg);
@@ -183,7 +183,7 @@
                 @include desktopFullHD {
                   & {
                     font-size: 2.2rem;
-                    padding: 1rem 3rem;
+                    padding: 1rem 2.5rem;
                   }
                 }
               }

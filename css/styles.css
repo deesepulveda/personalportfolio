@@ -636,7 +636,6 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 5;
-  border: 1px solid red;
 }
 @media only screen and (min-width: 768px) {
   .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .container_section_projects_li_title {
@@ -646,6 +645,7 @@ body {
 }
 @media only screen and (min-width: 1280px) {
   .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .container_section_projects_li_title {
+    white-space: nowrap;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -710,7 +710,7 @@ body {
 @media only screen and (min-width: 1920px) {
   .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li .contentBox .project_site_linkBox .project_site_link {
     font-size: 2.2rem;
-    padding: 1rem 3rem;
+    padding: 1rem 2.5rem;
   }
 }
 .container_section_projects .container_section_projects_container .container_section_projects_linksBox .container_section_projects_ul .container_section_projects_li:nth-child(1) {

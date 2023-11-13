@@ -29,6 +29,11 @@
           overflow: hidden;
           @include transit3;
           border: 0.1rem solid $color-white;
+          transform: translateX(-100vw);
+          -webkit-transform: translateX(-100vw);
+          -moz-transform: translateX(-100vw);
+          -ms-transform: translateX(-100vw);
+          -o-transform: translateX(-100vw);
           cursor: pointer;
 
           &::before {
@@ -37,7 +42,7 @@
             @include absol-center;
             background-color: $color-black;
             z-index: -1;
-            opacity: 0.7;
+            opacity: 0.8;
           }
 
           @include desktop {
@@ -58,8 +63,14 @@
             }
           }
 
+          &:hover::before {
+            opacity: 0.6;
+          }
+
           &:hover {
             height: 20rem;
+            // box-shadow: 0rem 0rem 4rem $color-yellow;
+            // border: 0.1rem solid $color-yellow;
 
             @include desktop {
               & {
@@ -192,65 +203,49 @@
         }
 
         .container_section_projects_li:nth-child(1) {
-          position: relative;
+          animation-delay: 300ms;
 
           &::after {
-            content: "";
-            @include keep-it-hundo;
-            @include absol-center;
             background: url(../public/images/DanasArtworkScreen.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            z-index: -2;
           }
         }
 
         .container_section_projects_li:nth-child(2) {
-          position: relative;
+          animation-delay: 500ms;
 
           &::after {
-            content: "";
-            @include keep-it-hundo;
-            @include absol-center;
             background: url(../public/images/luxury_motors_project.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            z-index: -2;
           }
         }
 
         .container_section_projects_li:nth-child(3) {
-          position: relative;
+          animation-delay: 700ms;
 
           &::after {
-            content: "";
-            @include keep-it-hundo;
-            @include absol-center;
             background: url(../public/images/bienchido.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            z-index: -2;
           }
         }
 
         .container_section_projects_li:nth-child(4) {
-          position: relative;
+          animation-delay: 900ms;
 
           &::after {
-            content: "";
-            @include keep-it-hundo;
-            @include absol-center;
             background: url(../public/images/sssbullies_project.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            z-index: -2;
           }
         }
 
+        .container_section_projects_li:nth-child(5) {
+          animation-delay: 1100ms;
+
+          &::after {
+            background: url(../public/images/nikita-D_m45VL5s4w-unsplash.jpg);
+          }
+        }
+
+        .container_section_projects_li:nth-child(1),
+        .container_section_projects_li:nth-child(2),
+        .container_section_projects_li:nth-child(3),
+        .container_section_projects_li:nth-child(4),
         .container_section_projects_li:nth-child(5) {
           position: relative;
 
@@ -258,14 +253,81 @@
             content: "";
             @include keep-it-hundo;
             @include absol-center;
-            background: url(../public/images/nikita-D_m45VL5s4w-unsplash.jpg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            opacity: 0.7;
             z-index: -2;
           }
         }
       }
     }
+  }
+}
+
+// Animation for Projects for Mobile
+
+.projectsMoveIn {
+  animation: moveInRight 0.8s ease-in-out both;
+  -webkit-animation: moveInRight 0.8s ease-in-out both;
+}
+
+// Animation for Projects for Desktop
+
+.projectsMoveUp {
+  animation: moveInUp 1s ease-in-out both;
+  -webkit-animation: moveInUp 1s ease-in-out both;
+}
+
+// keyframes
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(-100vw);
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
+  }
+
+  70% {
+    transform: translateX(5vw);
+    -webkit-transform: translateX(5vw);
+    -moz-transform: translateX(5vw);
+    -ms-transform: translateX(5vw);
+    -o-transform: translateX(5vw);
+  }
+  100% {
+    transform: translateX(0vw);
+    -webkit-transform: translateX(0vw);
+    -moz-transform: translateX(0vw);
+    -ms-transform: translateX(0vw);
+    -o-transform: translateX(0vw);
+  }
+}
+
+@keyframes moveInUp {
+  0% {
+    transform: translateY(200%);
+    -webkit-transform: translateY(200%);
+    -moz-transform: translateY(200%);
+    -ms-transform: translateY(200%);
+    -o-transform: translateY(200%);
+  }
+
+  70% {
+    transform: translateY(-5%);
+    -webkit-transform: translateY(-5%);
+    -moz-transform: translateY(-5%);
+    -ms-transform: translateY(-5%);
+    -o-transform: translateY(-5%);
+  }
+
+  100% {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
   }
 }

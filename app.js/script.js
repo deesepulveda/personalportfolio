@@ -64,6 +64,11 @@ const sectionsFunction = function (entries) {
   // console.log(entry);
 
   // entry.target.classList.toggle("active_nav_links", entry.isIntersecting);
+  if (entry.isIntersecting) {
+    projectLinks.forEach((pl) => {
+      pl.classList.add("projectsMoveIn");
+    });
+  }
 
   if (entry.isIntersecting && desktopMedia.matches === true) {
     let current = entry.target.getAttribute("id");
@@ -73,6 +78,10 @@ const sectionsFunction = function (entries) {
         resetLinks();
         nl.classList.add("active_nav_links");
       }
+    });
+
+    projectLinks.forEach((pl) => {
+      pl.classList.add("projectsMoveUp");
     });
   }
 };

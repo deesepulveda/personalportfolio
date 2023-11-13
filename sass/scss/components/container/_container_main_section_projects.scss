@@ -1,5 +1,30 @@
 .container_section_projects {
   @include flex-center;
+  position: relative;
+
+  &::before {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.8)
+    );
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background-image: url(../public/images/blurrystock-HIbAmybJHVs-unsplash.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+  }
 
   .container_section_projects_container {
     @include keep-it-hundo;

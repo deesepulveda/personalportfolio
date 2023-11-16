@@ -6,11 +6,7 @@
     content: "";
     @include keep-it-hundo;
     @include absol-topLeftZero;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0.85)
-    );
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: -1;
   }
 
@@ -18,7 +14,7 @@
     content: "";
     @include keep-it-hundo;
     @include absol-topLeftZero;
-    background-image: url(../public/images/rahul-mishra-o4SzxPgMwV8-unsplash.jpg);
+    background-image: url(../public/images/garrhet-sampson-CmF_5GYc6c0-unsplash.jpg);
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;

@@ -41,7 +41,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.8));
   z-index: -1;
 }
 .container_section_hero::after {
@@ -525,7 +525,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.85));
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: -1;
 }
 .container_section_projects::after {
@@ -535,7 +535,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../public/images/rahul-mishra-o4SzxPgMwV8-unsplash.jpg);
+  background-image: url(../public/images/garrhet-sampson-CmF_5GYc6c0-unsplash.jpg);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;

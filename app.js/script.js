@@ -61,10 +61,12 @@ navLinks.forEach((nl) => {
 
 const sectionsFunction = function (entries) {
   const [entry] = entries;
-  // console.log(entry);
 
   // entry.target.classList.toggle("active_nav_links", entry.isIntersecting);
-  if (entry.isIntersecting) {
+  if (
+    entry.isIntersecting &&
+    entry.target.classList.contains("container_section_projects")
+  ) {
     projectLinks.forEach((pl) => {
       pl.classList.add("projectsMoveIn");
     });
@@ -79,7 +81,13 @@ const sectionsFunction = function (entries) {
         nl.classList.add("active_nav_links");
       }
     });
+  }
 
+  if (
+    entry.isIntersecting &&
+    desktopMedia.matches === true &&
+    entry.target.classList.contains("container_section_projects")
+  ) {
     projectLinks.forEach((pl) => {
       pl.classList.add("projectsMoveUp");
     });

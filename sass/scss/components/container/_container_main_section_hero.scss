@@ -299,6 +299,12 @@
       }
     }
 
+    @include desktopFullHD {
+      & {
+        height: 50rem;
+      }
+    }
+
     // Hero Content Title
 
     .container_section_hero_content_title {
@@ -309,7 +315,7 @@
 
       img {
         width: 80%;
-        max-width: 60rem;
+        max-width: 80rem;
         height: auto;
         object-fit: contain;
 
@@ -382,7 +388,13 @@
         @include tabletPortrait {
           & {
             width: 60%;
-            max-width: 48rem;
+            // max-width: 48rem;
+          }
+        }
+
+        @include desktopFullHD {
+          & {
+            width: 65rem;
           }
         }
       }
@@ -459,6 +471,7 @@
           border: 0.1rem solid $color-yellow;
           color: $color-black;
           text-shadow: 0.1rem 0.1rem 0.3rem rgb(60, 58, 58);
+          box-shadow: 0.5rem 0.5rem 3rem rgb(27, 27, 27);
         }
       }
     }
